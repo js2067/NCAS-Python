@@ -125,40 +125,73 @@
 
 #Exercise 6.1
 
-s = 'I love to write python'
-for char in s:
-    print(char)
+#s = 'I love to write python'
+#for char in s:
+#    print(char)
     
-print(s[6])
-print(s[-1])
-print(len(s))
-print(s[0])
-print(s[0][0])
-print(s[0][0][0])
+#print(s[6])
+#print(s[-1])
+#print(len(s))
+#print(s[0])
+#print(s[0][0])
+#print(s[0][0][0])
 
-print(' ') 
+#print(' ') 
 
 #Exercise 6.2
 
-s = 'I love to write Python'
-split_s = s.split()
-for word in split_s:
-    if word.count('i') > 0:
-         print(f"I found 'i' in {word}")
+#s = 'I love to write Python'
+#split_s = s.split()
+#for word in split_s:
+#    if word.count('i') > 0:
+#         print(f"I found 'i' in {word}")
 
-print(' ')
+#print(' ')
 
 #Exercise 6.3
-something = 'Completely Different'
-print(something.count('t'))
-print(something.find('plete'))
-print(something.split('e'))
+#something = 'Completely Different'
+#print(something.count('t'))
+#print(something.find('plete'))
+#print(something.split('e'))
 
-thing2 = something.replace('Different', 'Silly')
-print(thing2)
+#thing2 = something.replace('Different', 'Silly')
+#print(thing2)
          
     
 
+#----------------------------
+
+#Exercise 7.1
+
+print(' ')
+a = [0,1,2]
+b = a
+print(f'{a} and {b}')
+b[0] = 'hello'
+print(f'{a} and {b}')
+a.append(3)
+print(f'{a} and {b}')
+
+print(' ')
+
+#Exercise 7.2
+
+a = 'can I change'
+b = a
+print(f'{a} and {b}')
+b = 'different'
+print(f'{a} and {b}')
+
+print (' ')
+
+#Exercise 7.3
+
+a = [0,1,2]
+import copy
+b = copy.deepcopy(a)
+print(f'{a} and {b}')
+b[0] = 'hello'
+print(f'{a} and {b}')
 
 
 
