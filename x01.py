@@ -62,21 +62,108 @@
 
 #Exercise 4.1
 
-t = (1,)
-print(t[0])
-y = list(range(100, 200))
-tuple_list = tuple(y)
-print (str(tuple_list[0]) + " " + str(tuple_list[99]))
+#t = (1,)
+#print(t[0])
+#y = list(range(100, 200))
+#tuple_list = tuple(y)
+#print (str(tuple_list[0]) + " " + str(tuple_list[99]))
        
 #Exercise 4.2
 
-mylist = [23, 'hi', 2.4e-10]
-for (count, item) in enumerate(mylist):
-    print(count, item)
+#mylist = [23, 'hi', 2.4e-10]
+#for (count, item) in enumerate(mylist):
+#    print(count, item)
     
 #Exercise 4.3
 
-first, middle, last = mylist
-print(str(first) + ' ' + str(middle) + ' ' + str(last))
-first, middle, last = middle, last, first
-print(str(first) + ' ' + str(middle) + ' ' + str(last))
+#first, middle, last = mylist
+#print(str(first) + ' ' + str(middle) + ' ' + str(last))
+#first, middle, last = middle, last, first
+#print(str(first) + ' ' + str(middle) + ' ' + str(last))
+
+#---------------------------------
+
+#Exercise 5.1
+
+#with open('weather.csv', 'r') as reader:
+#    data = reader.read()
+#    print(data)
+    
+#print(' ')
+
+#Exercise 5.2
+
+#with open('weather.csv', 'r') as reader:
+#    while True:
+#         line = reader.readline()
+#         if not line:
+#	      break
+#	 print(line)
+#    print('Its over')
+
+#Exercise 5.3
+
+#with open('weather.csv', 'r') as reader:
+#    reader.readline()
+#    rain = []
+#    for line in reader:
+#         print(line)
+#         data = line.strip().split(",")[-1]
+#         data = float(data)
+#         rain.append(data)
+#    for i in rain:
+#         print(i)
+         
+#with open('myrain.txt', 'w') as writer:
+#    for i in rain:
+         
+  
+
+
+#---------------------------
+
+
+#Exercise 6.1
+
+s = 'I love to write python'
+for char in s:
+    print(char)
+    
+print(s[6])
+print(s[-1])
+print(len(s))
+print(s[0])
+print(s[0][0])
+print(s[0][0][0])
+
+print(' ') 
+
+#Exercise 6.2
+
+s = 'I love to write Python'
+split_s = s.split()
+for word in split_s:
+    if word.count('i') > 0:
+         print(f"I found 'i' in {word}")
+
+print(' ')
+
+#Exercise 6.3
+something = 'Completely Different'
+print(something.count('t'))
+print(something.find('plete'))
+print(something.split('e'))
+
+thing2 = something.replace('Different', 'Silly')
+print(thing2)
+         
+    
+
+
+
+
+
+
+
+
+
