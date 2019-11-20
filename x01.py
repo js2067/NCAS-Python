@@ -163,36 +163,73 @@
 
 #Exercise 7.1
 
-print(' ')
-a = [0,1,2]
-b = a
-print(f'{a} and {b}')
-b[0] = 'hello'
-print(f'{a} and {b}')
-a.append(3)
-print(f'{a} and {b}')
+#print(' ')
+#a = [0,1,2]
+#b = a
+#print(f'{a} and {b}')
+#b[0] = 'hello'
+#print(f'{a} and {b}')
+#a.append(3)
+#print(f'{a} and {b}')
 
-print(' ')
+#print(' ')
 
 #Exercise 7.2
 
-a = 'can I change'
-b = a
-print(f'{a} and {b}')
-b = 'different'
-print(f'{a} and {b}')
+#a = 'can I change'
+#b = a
+#print(f'{a} and {b}')
+#b = 'different'
+#print(f'{a} and {b}')
 
-print (' ')
+#print (' ')
 
 #Exercise 7.3
 
-a = [0,1,2]
-import copy
-b = copy.deepcopy(a)
-print(f'{a} and {b}')
-b[0] = 'hello'
-print(f'{a} and {b}')
+#a = [0,1,2]
+#import copy
+#b = copy.deepcopy(a)
+#print(f'{a} and {b}')
+#b[0] = 'hello'
+#print(f'{a} and {b}')
 
+
+#--------------------------
+
+#Exercise 8.1 
+
+print(' ')
+
+def double_it(number):
+    return number * 2
+print(double_it(2))
+print(double_it(2.5))
+print(double_it('two'))
+print(' ')
+
+
+#Exercise 8.2 / 8.3
+
+def calc_hypo(a, b):
+    if type(a) not in (int, float) or type(b) not in (int, float):
+         print('Bad argument')
+         return False
+    elif a <= 0 or b <= 0:
+         print('Bad argument')
+         return False
+    else:
+         hypo = ((a*a) + (b*b))**0.5
+         return hypo
+     
+print(calc_hypo(3, 4))
+print(calc_hypo(3.5, 4))
+print(calc_hypo('three', 4))
+print (' ')
+
+
+
+
+  
 
 
 
