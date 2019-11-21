@@ -417,6 +417,7 @@
 #---------------------------- Matplotlib
 
 import matplotlib.pyplot as plt
+import matplotlib
 
 #Exercise 1.1
 
@@ -454,6 +455,8 @@ import matplotlib.pyplot as plt
 
 #Exercise 2.2
 
+fig = matplotlib.pyplot.figure(figsize=(10.0, 3.0))
+
 plt.subplot(1, 3, 1)
 x = (range(0, 10, 1))
 plt.plot(x)
@@ -463,9 +466,11 @@ plt.plot(y)
 plt.subplot(1, 3, 3)
 z = ([4] * 10)
 plt.plot(z)
+
+fig.tight_layout()
 plt.show()
 
-
+#-----------------
 
 
 
