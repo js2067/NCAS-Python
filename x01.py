@@ -229,19 +229,51 @@
 
 #-----------------------
 
-#Exercise 9,1
+#Exercise 9.3
 
-import sys
-from dancing.dance import boogie
-moves = sys.argv
+#import sys
+#from dancing.dance import boogie
+#moves = sys.argv
 
-boogie(moves)
-
-
-  
+#boogie(moves)
 
 
+ #----------------------- 
 
+#Exercise 10.1
+
+#print(' ')
+#a = set ([0, 1, 2, 3, 4, 5])
+#b = set ([2, 4, 6, 8])
+
+#print(a.union(b))
+#print(a.intersection(b))
+
+#print(' ')
+
+#Exercise 10.2
+
+#band = ['mel', 'geri', 'victoria', 'mel', 'emma']
+#counts = { }
+#for member in band:
+#    if member not in counts:
+#         counts[member] = 1
+#    else:
+#         counts[member] += 1
+         
+#    print(f'{member} is given on {counts[member]} occassion')
+
+#print(' ')
+
+#Exercise 10.3
+
+#d = {'maggie': 'uk', 'ronnie': 'usa'}
+#print(d.items())
+#print(d.keys())    
+#print(d.values())
+#print(d.get('maggie'
+
+#---------------------------------
 
 
 
