@@ -455,27 +455,73 @@ import matplotlib
 
 #Exercise 2.2
 
-fig = matplotlib.pyplot.figure(figsize=(10.0, 3.0))
+#fig = matplotlib.pyplot.figure(figsize=(10.0, 3.0))
 
-plt.subplot(1, 3, 1)
-x = (range(0, 10, 1))
-plt.plot(x)
-plt.subplot(1, 3, 2)
-y = (range(10, 0, -1))
-plt.plot(y)
-plt.subplot(1, 3, 3)
-z = ([4] * 10)
-plt.plot(z)
+#plt.subplot(1, 3, 1)
+#x = (range(0, 10, 1))
+#plt.plot(x)
+#plt.subplot(1, 3, 2)
+#y = (range(10, 0, -1))
+#plt.plot(y)
+#plt.subplot(1, 3, 3)
+#z = ([4] * 10)
+#plt.plot(z)
 
-fig.tight_layout()
-plt.show()
+#fig.tight_layout()
+#plt.show()
 
 #-----------------
 
+#from datetime import datetime
+#import serial
+#import io
 
+#ser = serial.Serial(
+#  port = '/dev/ttyUSB0',
+#  baudrate = 9600,
+#  bytesize = serial.EIGHTBITS,
+#  stopbits = serial.STOPBITS_ONE,
+#  parity = serial.PARITY_NONE
+#)
 
+#outfile ='./temperature_readouts.tsv'
 
+#dt = datetime.now()
 
+#print(dt.strftime('%A, %B %d, %Y'))
+
+#sio = io.TextIOWrapper(io.BufferedRWPair(ser, ser, 1), encoding = 'ascii', newline = '\r')
+#sio._CHUNK_SIZE = 1
+		       
+#with open(outfile, 'a') as f: 
+#    while ser.isOpen():
+#         temp_recorded = sio.readline()
+#         dt = datetime.now()
+#         f.write(dt.strftime('%Y-%m-%d %H:%M:%S \n' + temp_recorded + '\n'))
+#         f.flush()
+
+#ser.close()
+
+#-----------------------------------
+
+infile = 'temperature_readouts.tsv'
+outfile = 'sensor-data.nc'
+from csv import reader
+
+def temp_kelvin(temp):
+    value = temp.strip("+").strip("C").lstrip("O")
+    return float(value) + 273.15
+  
+times = []
+temps = []
+
+with open(infile, 'rt') as tsvfile:
+    tsvreader = reader(tsvfile, delimiter = '\t')
+    for row in tsvreader:
+         print(row)
+         times.append(row[0])
+         temps.append(temp_kelvin(row[1]))
+	 
 
 
 
