@@ -504,23 +504,23 @@ import matplotlib
 
 #-----------------------------------
 
-infile = 'temperature_readouts.tsv'
-outfile = 'sensor-data.nc'
-from csv import reader
+#infile = 'temperature_readouts.tsv'
+#outfile = 'sensor-data.nc'
+#from csv import reader
 
-def temp_kelvin(temp):
-    value = temp.strip("+").strip("C").lstrip("O")
-    return float(value) + 273.15
+#def temp_kelvin(temp):
+#    value = temp.strip("+").strip("C").lstrip("O")
+#    return float(value) + 273.15
   
-times = []
-temps = []
+#times = []
+#temps = []
 
-with open(infile, 'rt') as tsvfile:
-    tsvreader = reader(tsvfile, delimiter = '\t')
-    for row in tsvreader:
-         print(row)
-         times.append(row[0])
-         temps.append(temp_kelvin(row[1]))
+#with open(infile, 'rt') as tsvfile:
+#    tsvreader = reader(tsvfile, delimiter = '\t')
+#    for row in tsvreader:
+#         print(row)
+#         times.append(row[0])
+#         temps.append(temp_kelvin(row[1]))
 	 
 
 
